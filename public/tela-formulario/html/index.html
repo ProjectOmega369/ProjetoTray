@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Feedback</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../img/tray_logo.jpg" />
+</head>
+<body onload="saudacao()">
+    <header>
+        <div class="header-content">
+            <img class="logo-tray" src="../img/tray-novamarca.png" alt="Logo Tray" />
+            <div class="usuario-content">
+                <h2><span id="saudacao"></span> Usuário</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="feedback-section">
+            <h2>Feedback pós-compra</h2>
+            <form action="#" method="post" novalidate>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="id_compra">ID da Compra:</label>
+                    <input type="number" id="id_compra" name="id_compra" required />
+                </div>
+
+                <fieldset>
+                    <legend>🛍️ Experiência de Compra</legend>
+
+                    <label>Como você avalia sua experiência de compra? (1 a 5)</label>
+                    <div class="star-rating" data-name="compra">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="compra" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_compra" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+
+                    <label>Como você avalia a facilidade de navegação na loja? (1 a 5)</label>
+                    <div class="star-rating" data-name="navegacao">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="navegacao" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_navegacao" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+
+                    <label>Como você avalia o processo de pagamento? (1 a 5)</label>
+                    <div class="star-rating" data-name="pagamento">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="pagamento" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_pagamento" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+
+                    <label>Qual é a probabilidade de recomendar nossa loja? (1 a 5)</label>
+                    <div class="star-rating" data-name="recomendacao">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="recomendacao" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_recomendacao" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>🚚 Entrega e Produto</legend>
+
+                    <label>Como você avalia o cumprimento do prazo de entrega? (1 a 5)</label>
+                    <div class="star-rating" data-name="prazo">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="prazo" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_prazo" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+
+                    <label>Como você avalia a condição do produto ao chegar? (1 a 5)</label>
+                    <div class="star-rating" data-name="condicao">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="condicao" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_condicao" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+
+                    <label>Como você avalia o custo do frete? (1 a 5)</label>
+                    <div class="star-rating" data-name="frete">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="frete" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_frete" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>📦 Atendimento e Suporte</legend>
+
+                    <label>Você precisou de suporte ou atendimento durante a compra?<br /></label>
+                    <input type="radio" id="suporte-sim" name="suporte" value="sim" required />
+                    <label for="suporte-sim">Sim</label>
+
+                    <input type="radio" id="suporte-nao" name="suporte" value="nao" required />
+                    <label for="suporte-nao">Não</label>
+
+                    <br />
+
+                    <label>Se Sim, como você avalia sua experiência com o suporte? (1 a 5)</label>
+                    <div class="star-rating" data-name="avaliacao_suporte">
+                        <i class="bx bxs-star star" data-value="1"></i>
+                        <i class="bx bxs-star star" data-value="2"></i>
+                        <i class="bx bxs-star star" data-value="3"></i>
+                        <i class="bx bxs-star star" data-value="4"></i>
+                        <i class="bx bxs-star star" data-value="5"></i>
+                        <input type="hidden" name="avaliacao_suporte" value="0" />
+                    </div>
+                    <textarea class="comentario-adicional" name="comentario_avaliacao_suporte" rows="3" placeholder="Deixe um comentário adicional..." style="display:none;"></textarea>
+
+                    <label id='comentario-opcional' for="comentario-suporte">Comentário adicional (opcional):</label>
+                    <textarea id="comentario-suporte" name="comentario-suporte" rows="4" placeholder="Deixe aqui seu comentário... "></textarea>
+                    <br />
+
+                    <label>Você gostaria de ser contatado para suporte ou melhorias?</label>
+                    <input type="radio" id="contato-sim" name="contato" value="sim" required />
+                    <label for="contato-sim">Sim</label>
+
+                    <input type="radio" id="contato-nao" name="contato" value="nao" required />
+                    <label for="contato-nao">Não</label>
+                </fieldset>
+
+                <div class="form-buttons">
+                    <button id="botao-limpar" type="button">Limpar Formulário</button>
+                    <button id="botao-enviar" type="submit">Enviar</button>
+                    
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

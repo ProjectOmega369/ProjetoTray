@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background: url('../IMG/pexels-jopwell-2422286-2_upscayl_2x_realesrgan-x4plus.png') center center no-repeat;
+    background-size: 100%; 
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+.frase {
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 5% ;
+  padding: 0;
+  
+}
+
+  
+  .panel {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 5rem;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(0, 15, 30, 0.75); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); 
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    transition: all 0.8s ease;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;  
+    /* justify-content: flex-start;
+    padding-top: 4rem; */
+  }
+  
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 123, 255, 0.4);
+    z-index: 0;
+  }
+  
+
+  
+  .panel.expand {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+  
+
+  .content {
+    color: white;
+    text-align: center;
+    transition: opacity 0.5s ease;
+    margin-top: 3%;
+    display: block;
+    
+    height: 70%;
+  }
+  
+  .content h1 {
+    margin-bottom: 20px;
+  }
+  
+  .content button {
+    background-color: #00aaff;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    min-width: 180px; /* largura mínima comum */
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .content button:hover {
+    background-color: white;
+    color: #00aaff;
+    border-color: #00aaff;
+  }
+  
+
+ 
+  
+  .login-form h2 {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    font-size: 1em;
+    background-color: white;
+    color: #001f3f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #00aaff;
+    color: white;
+  }
+  
+
+  .header-tray {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    padding-left: 20px; 
+    z-index: 10; 
+  }
+  
+  .logo-tray {
+    height: 65px;
+    object-fit: contain;
+  }
+  
+
+
+  #typed-text {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  animation: blink 0.8s step-end infinite;
+  font-size: 3.5rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.panel.expandido {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+  }
+
+  .logo-panel-area {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo-panel {
+    width: 100px;
+    height: auto;
+    
+  }
+  
+  .descricao {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 2rem 0;
+    max-width: 600px;
+    line-height: 1.6;
+    font-weight: 400;
+  
+  }
+
+  .descricao-content{
+    text-align: left;
+    margin: 5%;
+  }
+  
+  .links-adicionais {
+    display: inline;
+    gap: 10px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; /* Para responsividade */
+    margin-top: 15rem;
+    margin-bottom: 0;
+  }
+
+  .btn-link {
+    background: transparent;
+    min-width: 180px; /* largura mínima comum */
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+  
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: fit-content;
+  }
+  
+  .btn-link:hover {
+    background-color: #fff;
+    color: #003366;
+    font-weight: bold;
+  }
+  
+  .frase-content{
+    margin-top: 4%;
+    height: 15%;
+   
+  }
+
+  .btn-link i {
+    margin-right: 8px;
+    font-size: 1.2em;
+    vertical-align: middle;
+  }
+
+  .botao-login-content{
+    margin-top: 5%;
+  }
+  
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  
+    border: 2px solid #00BFFF; /* Azul claro */
+    padding: 2rem;
+    background-color: transparent;
+    color: white;
+  
+    border-radius: 12px;
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .login-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: transparent;
+    border: 2px solid #00BFFF;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    border-color: #1E90FF;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #00BFFF;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .login-form button:hover {
+    background-color: #1E90FF;
+  }
+
+  
+  #loginForm {
+    display: none; /* Fica invisível até o botão ativar */
+  }
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95); /* opcional para um leve zoom */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  loginForm {
+    display: none; /* escondido inicialmente */
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+  
+    background-color: transparent;
+    border: 2px solid #00aaff;
+    border-radius: 10px;
+  
+    color: white;
+    max-width: 350px;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  #loginForm.mostrar {
+    display: flex;
+  }
+
+
+  

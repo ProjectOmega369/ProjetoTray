@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Tray</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link rel="icon" type="image/png" href="../IMG/tray_logo.jpg">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <header class="header-tray">
+    <!-- <img src="../IMG/tray-novamarca.png" alt="Logo Tray" class="logo-tray"> -->
+  </header>
+
+  <div class="overlay"></div>
+
+  <div class="panel" id="panel">
+    <div class="logo-panel-area">
+      <img src="../IMG/Tray-logo-removebg-preview_upscayl_3x_realesrgan-x4plus.png" alt="Logo Tray" class="logo-panel">
+    </div>  
+  
+    <div class="frase-content">
+      <h1 class="frase"><span id="typed-text"></span></h1>
+    </div>
+    
+    <!-- CONTEÚDO INICIAL -->
+    <div class="content" id="initialContent">
+      <div class="descricao-content">
+        <p class="descricao">
+          Queremos ouvir sua opinião para melhorar nossos serviços.  
+          Essa plataforma é voltada para registrar sugestões, elogios e críticas sobre a sua experiência de compra.
+        </p>
+      </div>  
+      
+      <div class="botao-login-content">
+        <button onclick="abrirLogin()" id="startBtn">FAZER LOGIN</button>
+      </div>
+  
+      <div class="links-adicionais">
+        <a href="https://www.tray.com.br" target="_blank" class="btn-link">
+          <i class='bx bx-globe'></i> Site da Tray
+        </a>
+        <a href="https://www.instagram.com/traycomercio" target="_blank" class="btn-link">
+          <i class='bx bxl-instagram'></i> Instagram
+        </a>
+        <a href="mailto:contato@tray.com.br" class="btn-link">
+          <i class='bx bx-envelope'></i> Contato
+        </a>
+      </div>
+    </div>
+  
+    <!-- FORMULÁRIO FORA do initialContent -->
+    <form class="login-form" id="loginForm">
+  <h2>Login</h2>
+  <input type="text" id="nome" placeholder="Nome" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <button type="submit">Entrar</button>
+</form>
+
+  </div>
+  </div>
+
+<script src="../JS/script.js"></script>
+</body>
+</html>
